@@ -1,7 +1,7 @@
 Elasticsearch commands
 /usr/local/bin/curator_cli --host localhost delete_indices --filter_list '{"filtertype":"age","source":"name","timestring":"%Y.%m.%d","unit":"days","unit_count":90,"direction":"older"}'
 
-GET filebeat-2018.11.15/_search?q=tags:sihengine
+GET filebeat-2018.11.15/_search?q=tags:givenTag
 
 GET filebeat-2018.11.15/_search?size=100
 {
