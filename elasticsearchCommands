@@ -1,0 +1,24 @@
+Elasticsearch commands
+/usr/local/bin/curator_cli --host localhost delete_indices --filter_list '{"filtertype":"age","source":"name","timestring":"%Y.%m.%d","unit":"days","unit_count":90,"direction":"older"}'
+
+GET filebeat-2018.11.15/_search?q=tags:sihengine
+
+GET filebeat-2018.11.15/_search?size=100
+{
+  "query": {
+    "match": {"message": "string to search"}
+  }
+}
+
+GET filebeat-2018.12.27/_search?size=100
+{
+  "query":{
+    "bool":{
+      "must":[
+           {"match": {"message":"one"}}
+          ,{"match": {"message":"two"}}
+          ,{"match": {"message":"three"}}
+        ]
+    }
+  }
+}
